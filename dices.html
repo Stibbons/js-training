@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/dices.css">
+    </head>
+    <body>
+        <div id="result_modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="mySmallModalLabel">Oops</h4>
+                </div>
+                <div id="result_modal_content" class="modal-body">
+                    No one won this round !
+                </div>
+            </div>
+          </div>
+        </div>
+            <div class="col-md-8">
+                <h1 class="h1">The Dice Game</h1>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <p class="p">Please click on "Add Player" and then on "Throw the dices!"</p>
+                        <hr/>
+                        <button type="button" onclick="addPlayers()" class="btn btn-default">Add players <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+                        <button type="button" onclick="loadPlayers()" class="btn">Load players from Json <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+                        <button type="button" onclick="throwDicesForAllPlayers()" class="btn btn-primary">Throw the dice! <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
+                        <p></p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped active" role="progressbar"></div>
+                        </div>
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Score</th>
+                                    <th colspan="2">Last dices throw</th>
+                                </tr>
+                            </thead>
+                            <tbody id="players-table-body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div id="debug"></div>
+            </div>
+        </div>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="js/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- My own scripts -->
+        <script src="js/dices.js" type="text/javascript" charset="utf-8"></script>
+    </body>
+</html>

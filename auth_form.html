@@ -1,0 +1,165 @@
+<html>
+    <head>
+        <title>Authentication</title>
+        <style type="text/css">
+            #my-title {
+                background: lightblue;
+                color: white;
+                width: 100%;
+                line-height: 4rem;
+                text-align: center;
+                font-size: 2rem;
+                vertical-align: middle;
+                border-radius: 1rem;
+                margin-bottom: 1rem;
+                text-shadow: 5px 5px 5px rgba(136,136,136, 0.5);
+            }
+
+            #my-creds {
+                margin-left: auto;
+                margin-right: auto;
+                width: 280px;
+                border-top: 1px;
+                background-color: lightblue;
+                box-shadow: 5px 5px 5px rgba(136,136,136, 0.6);
+                border-radius: 5px;
+                padding: 1rem;
+            }
+
+            #my-login {
+                /*background: #0C54CB;*/
+                /*color: white;*/
+                width: 120px;
+                display: inline-block;
+                text-shadow: 3px 3px 3px rgba(136,136,136, 0.6);
+                text-align: right;
+                margin-right: 10px;
+            }
+            #my-password {
+                /*background: #BFFEB4;*/
+                color: black;
+                width: 120px;
+                display: inline-block;
+                text-shadow: 3px 3px 3px rgba(136,136,136, 0.6);
+                text-align: right;
+                margin-right: 10px;
+            }
+
+            #my-login-text {
+                background-color: #F5F5F5;
+                width: 120px;
+            }
+            #my-password-text {
+                background-color: #F5F5F5;
+                width: 120px;
+            }
+
+            #my-login-text:focus, #my-password-text:focus {
+                background-color: lightgreen;
+            }
+
+            button#my-submit {
+                background-color: darkblue;
+                color: white;
+                padding: 6px;
+                border: 0px;
+                margin-right: 10px;
+                margin-top: 10px;
+                border-radius: 5px;
+            }
+            button#my-cancel {
+                background-color: grey;
+                color: white;
+                border: 0px;
+                padding: 6px;
+                border-radius: 5px;
+            }
+
+            #my-buttons{
+                width: 100%;
+                text-align:center;
+                margin-top: 10px;
+            }
+            .starter-template {
+              padding: 40px 15px;
+              text-align: center;
+            }
+
+        </style>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        </style>
+    </head>
+    <body>
+        <div id="my-title">Please enter your credentials</div>
+        <form action="#" method="get" accept-charset="utf-8">
+            <div id='my-creds'>
+                <span id="my-login">Login</span>
+                <input type="text" name="login" value="(username)" id='my-login-text'/>
+                <span id="my-password">Password</span>
+                <input type="my-pas-word" name="password" value="" id='my-password-text'/>
+                <div id="my-buttons">
+                    <button type="submit" id="my-submit">Submit</button>
+                    <button type="cancel" id="my-cancel">Cancel</button>
+                </div>
+            </div>
+        </form>
+        <div class="container">
+            <div class="starter-template">
+                <h1>Please enter your credentials</h1>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <form class="form-horizontal" role="form">
+                          <div class="form-group has-success has-feedback">
+                            <div class="col-sm-5">
+                              <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status"  placeholder="Email" required autofocus/>
+                              <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                              <span id="inputSuccess2Status" class="sr-only">(success)</span>
+                            </div>
+                          </div>
+                          <div class="form-group has-error has-feedback">
+                            <div class="col-sm-5">
+                              <input type="password" class="form-control" id="inputPassword3" placeholder="Password" required autofocus/>
+                              <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                              <span id="inputError2Status" class="sr-only">(error)</span>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="col-sm-offset-1 col-sm-5">
+                              <button type="submit" class="btn btn-default">Sign in</button>
+                              <button type="submit" class="btn btn-default">Cancel</button>
+                            </div>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="alert alert-danger" role="alert">This is an alerte !</div>
+            <div class="coverflow">
+                <div class="cover">A</div>
+                <div class="cover">B</div>
+                ...
+                <div class="cover">Y</div>
+                <div class="cover">Z</div>
+            </div>
+
+            <script>
+                $(function() {
+                    $('.coverflow').coverflow();
+                });
+            </script>
+        </div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="js/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Plugin -->
+        <script src="js/jquery.coverflow.js"></script>
+        <!-- Optionals -->
+        <script src="js/jquery.interpolate.js"></script>
+        <script src="js/jquery.mousewheel.js"></script>
+        <script src="js/jquery.touchSwipe.min.js"></script>
+        <script src="js/reflection.js"></script>
+        <script src="js/myjs.js"></script>
+    </body>
+</html>
